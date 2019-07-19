@@ -28,6 +28,11 @@ public class UserController{
         return "hello";
     }
 
+    @GetMapping("/deliveryList")
+    public String deliveryList(){
+        return "deliveryList";
+    }
+
     @GetMapping( "/users" )
     public String getAllUsers(Model model){
         model.addAttribute( "users", userService.findAll() );
