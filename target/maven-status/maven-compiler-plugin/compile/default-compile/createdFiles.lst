@@ -4,7 +4,7 @@ com/courier/config/SpringConfig.class
 com/courier/service/CustomerServiceImpl.class
 com/courier/service/CustomerService.class
 com/courier/entity/Customer.class
+com/courier/dao/CustomerDao.class
 com/courier/config/WebConfig.class
 com/courier/config/WebAppInitializer.class
-com/courier/dao/CustomerDao.class
 com/courier/controller/CustomerController.class
