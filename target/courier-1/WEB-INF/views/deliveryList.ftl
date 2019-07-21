@@ -27,5 +27,7 @@
         </tr>
     </#list>
 </table>
+<br>
+<a href="/courier-1">Main Page</a>
 </body>
 </html>

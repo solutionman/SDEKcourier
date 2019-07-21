@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Delivery List</title>
+    <title>Later Delivery</title>
 </head>
 <body>
-<H1>Delivery List</H1>
+<H1>Later Delivery</H1>
 <table>
     <tr>
         <th>Id</th>
@@ -27,5 +27,7 @@
         </tr>
     </#list>
 </table>
+<br>
+<a href="/courier-1">Main Page</a>
 </body>
 </html>

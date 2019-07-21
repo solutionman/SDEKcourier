@@ -1,7 +1,10 @@
 
-id, orderNo, lastName, firstName, middleName, deliveryTime, late 
+service mysql start
 
-SELECT * FROM customer;
+create schema customer;
+
+# table customer
+# id, orderNo, lastName, firstName, middleName, deliveryTime, late
 
 create table customer
 (
@@ -16,8 +19,9 @@ ALTER TABLE customer ADD firstName VARCHAR(255) NULL;
 ALTER TABLE customer ADD middleName VARCHAR(255) NULL;
 ALTER TABLE customer ADD lateDelivery VARCHAR(255) NOT NULL DEFAULT 'no' ;
 
-
 INSERT into customer ( orderNo, lastName, firstName, middleName)
 values ( 32, 'Ivanov', 'Kolya', 'Petrovich');
+
+SELECT * FROM customer;
 
 
