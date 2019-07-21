@@ -25,4 +25,10 @@ public class CustomerController {
         return "deliveryList";
     }
 
+    @GetMapping("/customersLater")
+    public String deliveryLater( Model model ){
+        model.addAttribute( "customers", customerService.findAll() );
+        return "deliveryLater";
+    }
+
 }
