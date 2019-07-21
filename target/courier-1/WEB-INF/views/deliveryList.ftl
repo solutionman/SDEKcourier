@@ -5,6 +5,7 @@
     <title>Delivery List</title>
 </head>
 <body>
+<H1><a href="/courier-1"> World's Best Delivery for our Customers </a></H1>
 <H1>Delivery List</H1>
 <table>
     <tr>
@@ -27,7 +28,5 @@
         </tr>
     </#list>
 </table>
-<br>
-<a href="/courier-1">Main Page</a>
 </body>
 </html>
