@@ -6,6 +6,7 @@ public class Customer{
     private String lastName;
     private String firstName;
     private String middleName;
+    private String lateDelivery;
 
     public Customer(){
 
@@ -49,5 +50,13 @@ public class Customer{
 
     public void setMiddleName( String middleName ){
         this.middleName = middleName;
+    }
+
+    public String getLateDelivery() {
+        return lateDelivery;
+    };
+
+    public void setLateDelivery( String lateDelivery ){
+        this.lateDelivery = lateDelivery;
     }
 }

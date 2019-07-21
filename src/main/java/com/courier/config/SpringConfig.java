@@ -1,9 +1,9 @@
 package com.courier.config;
 
-import com.courier.dao.UserDao;
-import com.courier.dao.UserDaoImpl;
-import com.courier.service.UserService;
-import com.courier.service.UserServiceImpl;
+import com.courier.dao.CustomerDao;
+import com.courier.dao.CustomerDaoImpl;
+import com.courier.service.CustomerService;
+import com.courier.service.CustomerServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -22,7 +22,7 @@ public class SpringConfig{
     @Bean
     public DataSource getDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setUrl( "jdbc:mysql://localhost:3306/vebinar?useSll=false" );
+        dataSource.setUrl( "jdbc:mysql://localhost:3306/courier?useSll=false" );
         dataSource.setUsername( "root" );
         dataSource.setPassword( "12lom97" );
         dataSource.setDriverClassName( "com.mysql.jdbc.Driver" );
@@ -30,12 +30,12 @@ public class SpringConfig{
     }
 
     @Bean
-    public UserDao getUserDao(){
-        return new UserDaoImpl( getJdbcTemplate() );
+    public CustomerDao getCustomerDao(){
+        return new CustomerDaoImpl( getJdbcTemplate() );
     }
 
     @Bean
-    public UserService getUserService(){
-        return new UserServiceImpl();
+    public CustomerService getCustomerService(){
+        return new CustomerServiceImpl();
     }
 }

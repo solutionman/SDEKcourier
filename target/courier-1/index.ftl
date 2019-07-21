@@ -9,6 +9,6 @@
 <br/>
 <a href="/courier-1/hello"> Hello Page </a>
 <br>
-<a href="/courier-1/deliveryList"> Delivery List </a>
+<a href="/courier-1/customers"> Delivery List </a>
 </body>
 </html>
