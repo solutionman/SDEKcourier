@@ -1,0 +1,10 @@
+/home/dima/JavaProjects/IDEA/SDEKcourier/src/main/java/com/courier/controller/CustomerController.java
+/home/dima/JavaProjects/IDEA/SDEKcourier/src/main/java/com/courier/config/WebConfig.java
+/home/dima/JavaProjects/IDEA/SDEKcourier/src/main/java/com/courier/service/CustomerService.java
+/home/dima/JavaProjects/IDEA/SDEKcourier/src/main/java/com/courier/dao/CustomerDao.java
+/home/dima/JavaProjects/IDEA/SDEKcourier/src/main/java/com/courier/mapper/CustomerMapper.java
+/home/dima/JavaProjects/IDEA/SDEKcourier/src/main/java/com/courier/config/WebAppInitializer.java
+/home/dima/JavaProjects/IDEA/SDEKcourier/src/main/java/com/courier/config/SpringConfig.java
+/home/dima/JavaProjects/IDEA/SDEKcourier/src/main/java/com/courier/dao/CustomerDaoImpl.java
+/home/dima/JavaProjects/IDEA/SDEKcourier/src/main/java/com/courier/service/CustomerServiceImpl.java
+/home/dima/JavaProjects/IDEA/SDEKcourier/src/main/java/com/courier/entity/Customer.java

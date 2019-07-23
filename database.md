@@ -22,6 +22,9 @@ ALTER TABLE customer ADD lateDelivery VARCHAR(255) NOT NULL DEFAULT 'no' ;
 INSERT into customer ( orderNo, lastName, firstName, middleName)
 values ( 32, 'Ivanov', 'Kolya', 'Petrovich');
 
+INSERT into customer ( orderNo, lastName, firstName, middleName)
+values ( 12, 'Sidorov', 'Michael', 'Alexandrovich');
+
 SELECT * FROM customer;
 
 # table deliveryTimeHistory
