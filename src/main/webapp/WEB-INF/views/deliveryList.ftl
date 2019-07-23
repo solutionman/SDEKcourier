@@ -14,6 +14,7 @@
         <th>lastName</th>
         <th>firstName</th>
         <th>middleName</th>
+        <th>deliveryTime</th>
         <th>lateDelivery</th>
     </tr>
     <#list customers as customer>
@@ -24,6 +25,7 @@
             <td>${customer.lastName}</td>
             <td>${customer.firstName}</td>
             <td>${customer.middleName}</td>
+            <td>${customer.deliveryTime}</td>
             <td>${customer.lateDelivery}</td>
         </tr>
     </#list>

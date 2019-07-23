@@ -1,5 +1,7 @@
 package com.courier.entity;
 
+import java.util.Date;
+
 public class Customer{
     private int id;
     private int orderNo;
@@ -7,6 +9,7 @@ public class Customer{
     private String firstName;
     private String middleName;
     private String lateDelivery;
+    private Date deliveryTime;
 
     public Customer(){
 
@@ -58,5 +61,13 @@ public class Customer{
 
     public void setLateDelivery( String lateDelivery ){
         this.lateDelivery = lateDelivery;
+    }
+
+    public Date getDeliveryTime(){
+        return deliveryTime;
+    }
+
+    public void setDeliveryTime( Date deliveryTime ){
+        this.deliveryTime = deliveryTime;
     }
 }
