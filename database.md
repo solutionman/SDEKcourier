@@ -24,4 +24,27 @@ values ( 32, 'Ivanov', 'Kolya', 'Petrovich');
 
 SELECT * FROM customer;
 
+# table deliveryTimeHistory
+# id, customerID, deliveryTime
+
+create table deliveryTimeHistory
+(
+	id int auto_increment,
+	customerID int not null,
+	deliveryTime datetime not null,
+	constraint deliveryTimeHistory_pk
+		primary key (id)
+);
+
+alter table deliveryTimeHistory
+	add isActual varchar(255) default 'yes' null;
+
+
+INSERT INTO deliveryTimeHistory (customerID, deliveryTime) VALUES (1, '2019-07-23 17:30:00');
+INSERT INTO deliveryTimeHistory (customerID, deliveryTime) VALUES (2, '2019-07-24 12:45:00');
+
+SELECT * FROM deliveryTimeHistory;
+
+
+
 

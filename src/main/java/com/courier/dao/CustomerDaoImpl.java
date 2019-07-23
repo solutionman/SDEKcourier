@@ -26,7 +26,9 @@ public class CustomerDaoImpl implements CustomerDao {
     }
 
     public List<Customer> findAll(){
-        String sql = "SELECT * FROM customer";
+        String sql = "SELECT c.*, dt.deliveryTime  FROM customer c" +
+                     " INNER JOIN deliveryTimeHistory dt ON c.ID = dt.customerID" +
+                     " WHERE dt.isActual = 'yes'";
         return jdbcTemplate.query(sql, new CustomerMapper());
     }
 
