@@ -1,5 +1,6 @@
 package com.courier.entity;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 public class Customer{
@@ -9,7 +10,7 @@ public class Customer{
     private String firstName;
     private String middleName;
     private String lateDelivery;
-    private Date deliveryTime;
+    private Timestamp deliveryTime;
 
     public Customer(){
 
@@ -67,7 +68,7 @@ public class Customer{
         return deliveryTime;
     }
 
-    public void setDeliveryTime( Date deliveryTime ){
+    public void setDeliveryTime( Timestamp deliveryTime ){
         this.deliveryTime = deliveryTime;
     }
 }
