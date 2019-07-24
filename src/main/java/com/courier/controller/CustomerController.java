@@ -27,7 +27,7 @@ public class CustomerController {
 
     @GetMapping("/customersLater")
     public String deliveryLater( Model model ){
-        model.addAttribute( "customers", customerService.findAll() );
+        model.addAttribute( "customers", customerService.findLate() );
         return "deliveryLater";
     }
 

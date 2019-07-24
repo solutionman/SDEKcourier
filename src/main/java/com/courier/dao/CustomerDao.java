@@ -12,6 +12,8 @@ public interface CustomerDao {
 
     List<Customer> findAll();
 
+    List<Customer> findLate();
+
     void update( Customer customer );
 
     void delete( int id );

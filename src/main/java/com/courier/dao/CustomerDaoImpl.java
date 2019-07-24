@@ -35,6 +35,16 @@ public class CustomerDaoImpl implements CustomerDao {
     }
 
     @Override
+    public List<Customer> findLate() {
+        String sql = " SELECT c.*, dt.deliveryTime  FROM customer c " +
+                     " INNER JOIN deliveryTimeHistory dt ON c.ID = dt.customerID " +
+                     " WHERE dt.isActual = 'yes' " +
+                     " AND c.lateDelivery = 'yes' " +
+                     " ORDER BY dt.deliveryTime ";
+        return jdbcTemplate.query(sql, new CustomerMapper());
+    }
+
+    @Override
     public void update(Customer customer) {
 
     }
