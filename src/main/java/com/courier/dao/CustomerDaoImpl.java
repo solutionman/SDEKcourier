@@ -29,6 +29,7 @@ public class CustomerDaoImpl implements CustomerDao {
         String sql = "SELECT c.*, dt.deliveryTime  FROM customer c " +
                      " INNER JOIN deliveryTimeHistory dt ON c.ID = dt.customerID " +
                      " WHERE dt.isActual = 'yes' " +
+                     " AND c.lateDelivery = 'no' " +
                      " ORDER BY dt.deliveryTime ";
         return jdbcTemplate.query(sql, new CustomerMapper());
     }
