@@ -8,4 +8,6 @@ public interface CustomerService {
     List<Customer> findAll();
 
     List<Customer> findLate();
+
+    void update( Customer customer );
 }

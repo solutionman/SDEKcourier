@@ -1,10 +1,13 @@
 package com.courier.controller;
 
+import com.courier.entity.Customer;
 import com.courier.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -29,6 +32,12 @@ public class CustomerController {
     public String deliveryLater( Model model ){
         model.addAttribute( "customers", customerService.findLate() );
         return "deliveryLater";
+    }
+
+    @PostMapping( "/customers" )
+    public String updateCustomer(@ModelAttribute( "customer" ) Customer customer){
+        customerService.update( customer );
+        return "deliveryList";
     }
 
 }
