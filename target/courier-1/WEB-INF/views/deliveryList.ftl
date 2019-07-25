@@ -27,6 +27,7 @@
             <td>${customer.middleName}</td>
             <td>${customer.deliveryTime}</td>
             <td>${customer.lateDelivery}</td>
+            <td><input type="submit" value="Can't deliver in time"></td>
         </tr>
     </#list>
 </table>
