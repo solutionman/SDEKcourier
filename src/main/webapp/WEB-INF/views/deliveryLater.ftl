@@ -27,6 +27,7 @@
             <td>${customer.middleName}</td>
             <td>${customer.deliveryTime}</td>
             <td>${customer.lateDelivery}</td>
+            <td><a href="/courier-1/update/${customer.id}">Set new time</a></td>
         </tr>
     </#list>
 </table>

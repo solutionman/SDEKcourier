@@ -22,7 +22,11 @@ public class CustomerDaoImpl implements CustomerDao {
 
     @Override
     public Customer getById(int id) {
-        return null;
+        String sql = " SELECT c.*, dt.deliveryTime FROM customer c" +
+                     " INNER JOIN deliveryTimeHistory dt ON c.ID = dt.customerID" +
+                     " WHERE dt.isActual = 'yes'" +
+                     " AND c.ID = ?";
+        return jdbcTemplate.queryForObject( sql, new CustomerMapper(), id );
     }
 
     public List<Customer> findAll(){

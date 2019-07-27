@@ -28,6 +28,11 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     @Override
+    public Customer getById(int id) {
+        return customerDao.getById( id );
+    }
+
+    @Override
     public void later(int id) {
         customerDao.later( id );
     }

@@ -11,5 +11,7 @@ public interface CustomerService {
 
     void update( Customer customer );
 
+    Customer getById( int id );
+
     void later( int id );
 }

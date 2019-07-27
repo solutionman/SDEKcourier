@@ -37,6 +37,12 @@ public class CustomerController {
         return "deliveryList";
     }
 
+    @GetMapping( "/update/{id}" )
+    public String update( @PathVariable( "id" ) int id, Model model ){
+        model.addAttribute( "customer", customerService.getById( id ) );
+        return "editCustomer";
+    }
+
     @GetMapping("/later/{id}")
     public String laterCustomer(@PathVariable( "id" ) int id){
         customerService.later( id );
