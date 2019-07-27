@@ -27,12 +27,7 @@
             <td>${customer.middleName}</td>
             <td>${customer.deliveryTime}</td>
             <td>${customer.lateDelivery}</td>
-            <td><a href="/courier-1/later/${customer.id}">Later</a></td>
-            <td>
-                <form name="customer" action="/courier-1/customers" method="post">
-                    <input type="submit" value="Can't deliver in time">
-                </form>
-            </td>
+            <td><a href="/courier-1/later/${customer.id}">Can't deliver in time</a></td>
         </tr>
     </#list>
 </table>
