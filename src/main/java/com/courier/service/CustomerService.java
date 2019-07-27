@@ -10,4 +10,6 @@ public interface CustomerService {
     List<Customer> findLate();
 
     void update( Customer customer );
+
+    void later( int id );
 }

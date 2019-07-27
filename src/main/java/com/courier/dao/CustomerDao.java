@@ -17,4 +17,6 @@ public interface CustomerDao {
     void update( Customer customer );
 
     void delete( int id );
+
+    void later( int id );
 }

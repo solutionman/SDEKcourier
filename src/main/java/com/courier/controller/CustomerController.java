@@ -5,10 +5,7 @@ import com.courier.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/")
@@ -38,6 +35,12 @@ public class CustomerController {
     public String updateCustomer(@ModelAttribute( "customer" ) Customer customer){
         customerService.update( customer );
         return "deliveryList";
+    }
+
+    @GetMapping("/later/{id}")
+    public String laterCustomer(@PathVariable( "id" ) int id){
+        customerService.later( id );
+        return "redirect:/customers";
     }
 
 }
