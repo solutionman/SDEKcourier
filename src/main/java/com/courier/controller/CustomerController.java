@@ -53,7 +53,7 @@ public class CustomerController {
     @GetMapping("/cancel/{id}")
     public String customerNewTime( @PathVariable( "id" ) int id ){
         customerService.cancel( id );
-        return "redirect:/customers";
+        return "redirect:/customersLater";
     }
 
 }
