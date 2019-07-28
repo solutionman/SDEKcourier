@@ -36,4 +36,9 @@ public class CustomerServiceImpl implements CustomerService{
     public void later(int id) {
         customerDao.later( id );
     }
+
+    @Override
+    public void cancel(int id) {
+        customerDao.cancel( id );
+    }
 }

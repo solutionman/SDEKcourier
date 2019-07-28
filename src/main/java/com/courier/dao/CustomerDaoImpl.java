@@ -64,4 +64,10 @@ public class CustomerDaoImpl implements CustomerDao {
         String sql = "UPDATE customer SET lateDelivery = 'yes' WHERE ID = ?";
         jdbcTemplate.update( sql, id );
     }
+
+    @Override
+    public void cancel(int id) {
+        String sql = "UPDATE customer SET lateDelivery = 'no' WHERE ID = ?";
+        jdbcTemplate.update( sql, id );
+    }
 }

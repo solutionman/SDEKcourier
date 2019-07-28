@@ -31,10 +31,11 @@ public class CustomerController {
         return "deliveryLater";
     }
 
-    @PostMapping( "/customers" )
+    @PostMapping( "/updateCustomer" )
     public String updateCustomer(@ModelAttribute( "customer" ) Customer customer){
+        java.lang.System.out.println("DEBUG updateCustomer ");
         customerService.update( customer );
-        return "deliveryList";
+        return "redirect:/customers";
     }
 
     @GetMapping( "/update/{id}" )
@@ -46,6 +47,12 @@ public class CustomerController {
     @GetMapping("/later/{id}")
     public String laterCustomer(@PathVariable( "id" ) int id){
         customerService.later( id );
+        return "redirect:/customers";
+    }
+
+    @GetMapping("/cancel/{id}")
+    public String customerNewTime( @PathVariable( "id" ) int id ){
+        customerService.cancel( id );
         return "redirect:/customers";
     }
 

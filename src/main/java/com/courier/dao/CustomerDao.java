@@ -19,4 +19,6 @@ public interface CustomerDao {
     void delete( int id );
 
     void later( int id );
+
+    void cancel( int id );
 }
