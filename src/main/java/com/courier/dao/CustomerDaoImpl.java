@@ -22,29 +22,23 @@ public class CustomerDaoImpl implements CustomerDao {
 
     @Override
     public Customer getById(int id) {
-        String sql = " SELECT c.*, dt.deliveryTime FROM customer c" +
-                     " INNER JOIN deliveryTimeHistory dt ON c.ID = dt.customerID" +
-                     " WHERE dt.isActual = 'yes'" +
-                     " AND c.ID = ?";
+        String sql = " SELECT c.* FROM customer c" +
+                     " WHERE c.ID = ?";
         return jdbcTemplate.queryForObject( sql, new CustomerMapper(), id );
     }
 
     public List<Customer> findAll(){
-        String sql = "SELECT c.*, dt.deliveryTime  FROM customer c " +
-                     " INNER JOIN deliveryTimeHistory dt ON c.ID = dt.customerID " +
-                     " WHERE dt.isActual = 'yes' " +
-                     " AND c.lateDelivery = 'no' " +
-                     " ORDER BY dt.deliveryTime ";
+        String sql = "SELECT c.*  FROM customer c " +
+                     " WHERE c.lateDelivery = 'no' " +
+                     " ORDER BY c.deliveryTime ";
         return jdbcTemplate.query(sql, new CustomerMapper());
     }
 
     @Override
     public List<Customer> findLate() {
-        String sql = " SELECT c.*, dt.deliveryTime  FROM customer c " +
-                     " INNER JOIN deliveryTimeHistory dt ON c.ID = dt.customerID " +
-                     " WHERE dt.isActual = 'yes' " +
-                     " AND c.lateDelivery = 'yes' " +
-                     " ORDER BY dt.deliveryTime ";
+        String sql = " SELECT c.* FROM customer c " +
+                     " WHERE c.lateDelivery = 'yes' " +
+                     " ORDER BY c.deliveryTime ";
         return jdbcTemplate.query(sql, new CustomerMapper());
     }
 

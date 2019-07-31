@@ -48,6 +48,14 @@ INSERT INTO deliveryTimeHistory (customerID, deliveryTime) VALUES (2, '2019-07-2
 
 SELECT * FROM deliveryTimeHistory;
 
+# modify table customer - add a deliveryTime, (history set aside for a while)
+
+alter table customer drop column deliveryTime;
+alter table customer add deliveryTime timestamp null;
+
+UPDATE customer SET deliveryTime = '2019-07-23 17:30:00' WHERE ID = 1;
+UPDATE customer SET deliveryTime = '2019-07-24 12:45:00' WHERE ID = 2;
+
 
 
 
