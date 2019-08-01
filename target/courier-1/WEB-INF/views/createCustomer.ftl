@@ -12,9 +12,9 @@
     <input title="orderNo" type="text" name="orderNo">
     <p>lastName</p>
     <input title="lastName" type="text" name="lastName">
-    <p>lastName</p>
+    <p>firstName</p>
     <input title="firstName" type="text" name="firstName">
-    <p>lastName</p>
+    <p>middleName</p>
     <input title="middleName" type="text" name="middleName">
     <p>lateDelivery</p>
     <input title="lateDelivery" type="text" name="lateDelivery">

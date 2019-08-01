@@ -14,9 +14,9 @@
     <input title="orderNo" type="text" name="orderNo" value="${customer.orderNo}">
     <p>lastName</p>
     <input title="lastName" type="text" name="lastName" value="${customer.lastName}">
-    <p>lastName</p>
+    <p>firstName</p>
     <input title="firstName" type="text" name="firstName" value="${customer.firstName}">
-    <p>lastName</p>
+    <p>middleName</p>
     <input title="middleName" type="text" name="middleName" value="${customer.middleName}">
     <p>lateDelivery</p>
     <input title="lateDelivery" type="text" name="lateDelivery" value="${customer.lateDelivery}">
