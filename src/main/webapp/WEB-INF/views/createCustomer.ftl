@@ -18,6 +18,8 @@
     <input title="middleName" type="text" name="middleName">
     <p>lateDelivery</p>
     <input title="lateDelivery" type="text" name="lateDelivery">
+    <p>deliveryTime</p>
+    <input title="deliveryTime" type="text" name="deliveryTime">
     <input type="submit" value="Create New Customer">
 </form>
 </body>
