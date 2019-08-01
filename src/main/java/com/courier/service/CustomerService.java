@@ -9,6 +9,8 @@ public interface CustomerService {
 
     List<Customer> findLate();
 
+    void save( Customer customer );
+
     void update( Customer customer );
 
     Customer getById( int id );

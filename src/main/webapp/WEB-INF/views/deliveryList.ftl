@@ -31,6 +31,7 @@
         </tr>
     </#list>
 </table>
+<a href="/courier-1/addCustomer/">New Customer</a>
 </body>
 </html>
 

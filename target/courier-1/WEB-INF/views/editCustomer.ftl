@@ -11,15 +11,15 @@
     <p>ID</p>
     <input title="ID" type="text" name="id" value="${customer.id}">
     <p>orderNo</p>
-    <input title="orderNo" type="text" name="orderNo", value="${customer.orderNo}">
+    <input title="orderNo" type="text" name="orderNo" value="${customer.orderNo}">
     <p>lastName</p>
-    <input title="lastName", type="text" name="lastName" value="${customer.lastName}">
+    <input title="lastName" type="text" name="lastName" value="${customer.lastName}">
     <p>lastName</p>
-    <input title="firstName", type="text" name="firstName" value="${customer.firstName}">
+    <input title="firstName" type="text" name="firstName" value="${customer.firstName}">
     <p>lastName</p>
-    <input title="middleName", type="text" name="middleName" value="${customer.middleName}">
+    <input title="middleName" type="text" name="middleName" value="${customer.middleName}">
     <p>deliveryTime</p>
-    <input title="deliveryTime", type="text" name="deliveryTime" value="${customer.deliveryTime}">
+    <input title="deliveryTime" type="text" name="deliveryTime" value="${customer.deliveryTime}">
     <input type="submit" value="Set New Delivery Time">
 </form>
 </body>

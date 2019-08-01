@@ -25,6 +25,17 @@ public class CustomerController {
         return "deliveryList";
     }
 
+    @GetMapping( "/addCustomer" )
+    public String createCustomerPage(){
+        return "createCustomer";
+    }
+
+    @PostMapping( "/addCustomer" )
+    public String addCustomer( @ModelAttribute( "customer" ) Customer customer ){
+        customerService.save( customer );
+        return "redirect:/customers";
+    }
+
     @GetMapping("/customersLater")
     public String deliveryLater( Model model ){
         model.addAttribute( "customers", customerService.findLate() );
