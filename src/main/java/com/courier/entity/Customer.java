@@ -10,7 +10,7 @@ public class Customer{
     private String firstName;
     private String middleName;
     private String lateDelivery;
-    //private Timestamp deliveryTime;
+    private Timestamp deliveryTime;
 
     public Customer(){
 
@@ -64,11 +64,11 @@ public class Customer{
         this.lateDelivery = lateDelivery;
     }
 
-//    public Date getDeliveryTime(){
-//        return deliveryTime;
-//    }
-//
-//    public void setDeliveryTime( Timestamp deliveryTime ){
-//        this.deliveryTime = deliveryTime;
-//    }
+    public Date getDeliveryTime(){
+        return deliveryTime;
+    }
+
+    public void setDeliveryTime( Timestamp deliveryTime ){
+        this.deliveryTime = deliveryTime;
+    }
 }
