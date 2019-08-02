@@ -17,8 +17,8 @@ public class CustomerDaoImpl implements CustomerDao {
 
     @Override
     public void save(Customer customer) {
-        String sql = "INSERT INTO customer ( orderNo, lastName, firstName, middleName, lateDelivery, deliveryTime) VALUES ( ?, ?, ?, ?, ?, ? )";
-        jdbcTemplate.update( sql, customer.getOrderNo(), customer.getLastName(), customer.getFirstName(), customer.getMiddleName(), customer.getLateDelivery(), customer.getDeliveryTime() );
+        String sql = "INSERT INTO customer ( orderNo, lastName, firstName, middleName, lateDelivery, deliveryTime, address, phone) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )";
+        jdbcTemplate.update( sql, customer.getOrderNo(), customer.getLastName(), customer.getFirstName(), customer.getMiddleName(), customer.getLateDelivery(), customer.getDeliveryTime(), customer.getAddress(), customer.getPhone() );
     }
 
     @Override

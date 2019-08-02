@@ -16,6 +16,8 @@ public class CustomerMapper implements RowMapper<Customer> {
         customer.setFirstName( rs.getString( "firstname" ) );
         customer.setLastName( rs.getString( "lastname" ) );
         customer.setMiddleName( rs.getString( "middlename" ) );
+        customer.setAddress( rs.getString( "address" ) );
+        customer.setPhone( rs.getString( "phone" ) );
         customer.setLateDelivery( rs.getString( "latedelivery" ) );
         customer.setDeliveryTime( rs.getTimestamp( "deliveryTime" ) );
         return customer;

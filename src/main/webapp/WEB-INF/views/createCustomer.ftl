@@ -16,8 +16,12 @@
     <input title="firstName" type="text" name="firstName">
     <p>middleName</p>
     <input title="middleName" type="text" name="middleName">
+    <p>address</p>
+    <input title="address" type="text" name="address">
     <p>lateDelivery</p>
     <input title="lateDelivery" type="text" name="lateDelivery" value="no">
+    <p>phone</p>
+    <input title="phone" type="text" name="phone">
     <p>deliveryTime</p>
     <input title="deliveryTime" type="text" name="deliveryTime" value="2019-08-12 17:30:00">
     <input type="submit" value="Create New Customer">
