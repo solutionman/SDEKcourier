@@ -18,43 +18,19 @@ ALTER TABLE customer ADD lastName VARCHAR(255) NULL;
 ALTER TABLE customer ADD firstName VARCHAR(255) NULL;
 ALTER TABLE customer ADD middleName VARCHAR(255) NULL;
 ALTER TABLE customer ADD lateDelivery VARCHAR(255) NOT NULL DEFAULT 'no' ;
+ALTER TABLE customer ADD deliveryTime timestamp null;
+ALTER TABLE customer ADD address VARCHAR(255) NULL ;
+ALTER TABLE customer ADD phone VARCHAR(255) NULL ;
 
-INSERT into customer ( orderNo, lastName, firstName, middleName)
-values ( 32, 'Ivanov', 'Kolya', 'Petrovich');
+INSERT into customer ( orderNo, lastName, firstName, middleName, deliveryTime, address, phone)
+values ( 32, 'Ivanov', 'Kolya', 'Petrovich', '2019-10-23 17:30:00', 'Svetlaya 12/5','+7-913-484-78-54');
 
-INSERT into customer ( orderNo, lastName, firstName, middleName)
-values ( 12, 'Sidorov', 'Michael', 'Alexandrovich');
+INSERT into customer ( orderNo, lastName, firstName, middleName, deliveryTime, address, phone)
+values ( 12, 'Sidorov', 'Michael', 'Alexandrovich', '2019-09-24 12:45:00', 'Ryabova 45/11','+7-913-458-21-45');
 
 SELECT * FROM customer;
 
-# table deliveryTimeHistory
-# id, customerID, deliveryTime
 
-create table deliveryTimeHistory
-(
-	id int auto_increment,
-	customerID int not null,
-	deliveryTime datetime not null,
-	constraint deliveryTimeHistory_pk
-		primary key (id)
-);
-
-alter table deliveryTimeHistory
-	add isActual varchar(255) default 'yes' null;
-
-
-INSERT INTO deliveryTimeHistory (customerID, deliveryTime) VALUES (1, '2019-07-23 17:30:00');
-INSERT INTO deliveryTimeHistory (customerID, deliveryTime) VALUES (2, '2019-07-24 12:45:00');
-
-SELECT * FROM deliveryTimeHistory;
-
-# modify table customer - add a deliveryTime, (history set aside for a while)
-
-alter table customer drop column deliveryTime;
-alter table customer add deliveryTime timestamp null;
-
-UPDATE customer SET deliveryTime = '2019-07-23 17:30:00' WHERE ID = 1;
-UPDATE customer SET deliveryTime = '2019-07-24 12:45:00' WHERE ID = 2;
 
 
 
