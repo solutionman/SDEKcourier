@@ -25,6 +25,7 @@
             <td>${customer.lastName}</td>
             <td>${customer.firstName}</td>
             <td>${customer.middleName}</td>
+            <td>${customer.deliveryTime}</td>
             <td>${customer.lateDelivery}</td>
             <td><a href="/courier-1/later/${customer.id}">Can't deliver in time</a></td>
         </tr>
