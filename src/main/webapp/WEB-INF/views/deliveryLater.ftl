@@ -14,7 +14,7 @@
         <th>lastName</th>
         <th>firstName</th>
         <th>middleName</th>
-        <th>DeliveryTile</th>
+        <th>DeliveryTime</th>
         <th>lateDelivery</th>
     </tr>
     <#list customers as customer>
