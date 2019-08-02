@@ -4,7 +4,7 @@ service mysql start
 create schema customer;
 
 # table customer
-# id, orderNo, lastName, firstName, middleName, deliveryTime, late
+# id, orderNo, lastName, firstName, middleName, lateDelivery, deliveryTime, address, phone 
 
 create table customer
 (
