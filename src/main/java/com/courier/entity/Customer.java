@@ -10,7 +10,7 @@ public class Customer{
     private String firstName;
     private String middleName;
     private String lateDelivery;
-    private Timestamp deliveryTime;
+    private String deliveryTime;
     private String address;
     private String phone;
 
@@ -66,11 +66,11 @@ public class Customer{
         this.lateDelivery = lateDelivery;
     }
 
-    public Date getDeliveryTime(){
+    public String getDeliveryTime(){
         return deliveryTime;
     }
 
-    public void setDeliveryTime( Timestamp deliveryTime ){
+    public void setDeliveryTime( String deliveryTime ){
         this.deliveryTime = deliveryTime;
     }
 

@@ -20,8 +20,8 @@
     <input title="middleName" type="text" name="middleName" value="${customer.middleName}">
     <p>lateDelivery</p>
     <input title="lateDelivery" type="text" name="lateDelivery" value="no">
-    <p>deliveryTime</p>
-    <input title="deliveryTime" type="text" name="deliveryTime" value="2019-08-12 17:30:00">
+    <p>deliveryTime (current: ${customer.deliveryTime})</p>
+    <input title="deliveryTime" type="text" name="deliveryTime" value="${customer.deliveryTime}">
     <input type="submit" value="Set New Delivery Time">
 </form>
 </body>
