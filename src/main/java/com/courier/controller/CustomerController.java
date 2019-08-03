@@ -46,7 +46,7 @@ public class CustomerController {
     public String updateCustomer(@ModelAttribute( "customer" ) Customer customer){
         java.lang.System.out.println("DEBUG updateCustomer ");
         customerService.update( customer );
-        return "redirect:/customers";
+        return "redirect:/customersLater";
     }
 
     @GetMapping( "/update/{id}" )
