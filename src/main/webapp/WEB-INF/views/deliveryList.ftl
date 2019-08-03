@@ -17,7 +17,7 @@
         <th>address</th>
         <th>deliveryTime</th>
         <th>phone</th>
-        <th>lateDelivery</th>
+        <#--<th>lateDelivery</th>-->
     </tr>
     <#list customers as customer>
         <tr>
@@ -30,7 +30,7 @@
             <td>${customer.address}</td>
             <td>${customer.deliveryTime}</td>
             <td>${customer.phone}</td>
-            <td>${customer.lateDelivery}</td>
+            <#--<td>${customer.lateDelivery}</td>-->
             <td><a href="/courier-1/later/${customer.id}">Can't deliver in time</a></td>
         </tr>
     </#list>
