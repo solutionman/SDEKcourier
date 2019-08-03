@@ -9,7 +9,7 @@
 <H1>Delivery List</H1>
 <table>
     <tr>
-        <th>Id</th>
+        <#--<th>Id</th>-->
         <th>orderNo</th>
         <th>lastName</th>
         <th>firstName</th>
@@ -22,7 +22,7 @@
     <#list customers as customer>
         <tr>
             <#--<td><a href="customer/${customer.id}">${customer.id}</a></td>-->
-            <td>${customer.id}</td>
+            <#--<td>${customer.id}</td>-->
             <td>${customer.orderNo}</td>
             <td>${customer.lastName}</td>
             <td>${customer.firstName}</td>
