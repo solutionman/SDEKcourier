@@ -36,5 +36,10 @@
         </tr>
     </#list>
 </table>
+<form name="customerByID" action="/courier-1/customerByOrderNo" method="post">
+    <p>Search By orderNo:</p>
+    <input title="orderNo" type="text" name="orderNo" >
+    <input title="Search" type="submit" value="Search">
+</form>
 </body>
 </html>

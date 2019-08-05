@@ -10,6 +10,8 @@ public interface CustomerDao {
 
     Customer getById( int id );
 
+    Customer getByOrderNo( int id );
+
     List<Customer> findAll();
 
     List<Customer> findLate();

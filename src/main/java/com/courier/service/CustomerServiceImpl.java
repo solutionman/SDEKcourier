@@ -38,6 +38,11 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     @Override
+    public Customer getByOrderNo(int orderNo) {
+        return customerDao.getByOrderNo( orderNo );
+    }
+
+    @Override
     public void later(int id) {
         customerDao.later( id );
     }

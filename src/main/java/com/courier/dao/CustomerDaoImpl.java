@@ -28,6 +28,12 @@ public class CustomerDaoImpl implements CustomerDao {
         return jdbcTemplate.queryForObject( sql, new CustomerMapper(), id );
     }
 
+    @Override
+    public Customer getByOrderNo(int orderNo) {
+        String sql = " SELECT * FROM customer WHERE orderNo = ?";
+        return jdbcTemplate.queryForObject( sql, new CustomerMapper(), orderNo );
+    }
+
     public List<Customer> findAll(){
         String sql = "SELECT c.*  FROM customer c " +
                      " WHERE c.lateDelivery = 'no' " +
