@@ -28,6 +28,9 @@ values ( 32, 'Ivanov', 'Kolya', 'Petrovich', '2019-10-23 17:30:00', 'Svetlaya 12
 INSERT into customer ( orderNo, lastName, firstName, middleName, deliveryTime, address, phone)
 values ( 12, 'Sidorov', 'Michael', 'Alexandrovich', '2019-09-24 12:45:00', 'Ryabova 45/11','+7-913-458-21-45');
 
+INSERT into customer ( orderNo, lastName, firstName, middleName, deliveryTime, address, phone)
+values ( 15, 'Petrov', 'Sergey', 'Mihailovich', '2019-09-15 18:30:00', 'Sirenevaya 11/2','+7-123-845-54-65');
+
 SELECT * FROM customer;
 
 
