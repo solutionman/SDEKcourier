@@ -7,6 +7,12 @@
 <body>
 <H1><a href="/courier-1"> World's Best Delivery for our Customers </a></H1>
 <H1>Later Delivery</H1>
+<form name="customerByID" action="/courier-1/customerByOrderNo" method="post">
+    <p>Search By orderNo:
+        <input title="orderNo" type="text" name="orderNo" >
+        <input title="Search" type="submit" value="Search">
+    </p>
+</form>
 <table>
     <tr>
         <#--<th>Id</th>-->
@@ -36,10 +42,5 @@
         </tr>
     </#list>
 </table>
-<form name="customerByID" action="/courier-1/customerByOrderNo" method="post">
-    <p>Search By orderNo:</p>
-    <input title="orderNo" type="text" name="orderNo" >
-    <input title="Search" type="submit" value="Search">
-</form>
 </body>
 </html>
