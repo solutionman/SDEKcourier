@@ -50,9 +50,10 @@ public class CustomerController {
     }
 
     @PostMapping( "/customerByOrderNo" )
-    public String customerByOrderNo(@ModelAttribute( "orderNo" ) int orderNo ){
-        customerService.getByOrderNo( orderNo );
-        return "redirect:/customersLater";
+    public String customerByOrderNo(@ModelAttribute( "orderNo" ) int orderNo, Model model ){
+        //customerService.getByOrderNo( orderNo );
+        model.addAttribute( "customer", customerService.getByOrderNo( orderNo ) );
+        return "editCustomer";
     }
 
     @GetMapping( "/update/{id}" )
