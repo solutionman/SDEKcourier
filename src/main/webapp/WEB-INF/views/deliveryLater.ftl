@@ -9,7 +9,7 @@
 <H1>Later Delivery</H1>
 <form name="customerByID" action="/courier-1/customerByOrderNo" method="post">
     <p>Search By orderNo:
-        <input title="orderNo" type="text" name="orderNo" >
+        <input title="orderNo" type="text" name="orderNo" required pattern="[0-9]{1,20}">
         <input title="Search" type="submit" value="Search">
     </p>
 </form>
