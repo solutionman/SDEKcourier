@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @Controller
 @RequestMapping("/")
 public class CustomerController {
@@ -52,7 +54,16 @@ public class CustomerController {
     @PostMapping( "/customerByOrderNo" )
     public String customerByOrderNo(@ModelAttribute( "orderNo" ) int orderNo, Model model ){
         //customerService.getByOrderNo( orderNo );
-        model.addAttribute( "customer", customerService.getByOrderNo( orderNo ) );
+        try {
+            Model test = model.addAttribute("customer", customerService.getByOrderNo(orderNo));
+            Map<String, Object> map =  test.asMap();
+            Object testCustomer =  map.get( "customer" );
+            if(testCustomer == null ){
+                return "redirect:/customersLater";
+            }
+        } catch (Exception e){
+            return "/customersLater";
+        }
         return "editCustomer";
     }
 

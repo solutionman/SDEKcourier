@@ -31,7 +31,12 @@ public class CustomerDaoImpl implements CustomerDao {
     @Override
     public Customer getByOrderNo(int orderNo) {
         String sql = " SELECT * FROM customer WHERE orderNo = ?";
-        return jdbcTemplate.queryForObject( sql, new CustomerMapper(), orderNo );
+        try {
+            return jdbcTemplate.queryForObject(sql, new CustomerMapper(), orderNo);
+        } catch (Exception e) {
+            java.lang.System.out.println( "No records" + e );
+        }
+        return null;
     }
 
     public List<Customer> findAll(){
