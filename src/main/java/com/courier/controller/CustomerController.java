@@ -59,7 +59,7 @@ public class CustomerController {
             Map<String, Object> map =  test.asMap();
             Object testCustomer =  map.get( "customer" );
             if(testCustomer == null ){
-                return "redirect:/customersLater";
+                return "redirect:/noRecord";
             }
         } catch (Exception e){
             return "/customersLater";
@@ -83,6 +83,11 @@ public class CustomerController {
     public String customerNewTime( @PathVariable( "id" ) int id ){
         customerService.cancel( id );
         return "redirect:/customersLater";
+    }
+
+    @GetMapping( "/noRecord" )
+    public String noRecordPage(){
+        return "noRecord";
     }
 
 }
