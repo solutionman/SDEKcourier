@@ -23,6 +23,9 @@
         <th>address</th>
         <th>DeliveryTime</th>
         <th>phone</th>
+        <th></th>
+        <th></th>
+        <th>Time of adding task</th>
         <#--<th>lateDelivery</th>-->
     </tr>
     <#list customers as customer>
@@ -39,6 +42,7 @@
             <#--<td>${customer.lateDelivery}</td>-->
             <td><a href="/courier-1/cancel/${customer.id}">Cancel</a></td>
             <td><a href="/courier-1/update/${customer.id}">Set new time</a></td>
+            <td>${customer.lateTaskTime}</td>
         </tr>
     </#list>
 </table>
