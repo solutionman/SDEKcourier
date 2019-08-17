@@ -21,6 +21,7 @@ ALTER TABLE customer ADD lateDelivery VARCHAR(255) NOT NULL DEFAULT 'no' ;
 ALTER TABLE customer ADD deliveryTime timestamp null;
 ALTER TABLE customer ADD address VARCHAR(255) NULL ;
 ALTER TABLE customer ADD phone VARCHAR(255) NULL ;
+ALTER TABLE customer ADD lateTaskTime timestamp null;
 
 INSERT into customer ( orderNo, lastName, firstName, middleName, deliveryTime, address, phone)
 values ( 32, 'Ivanov', 'Kolya', 'Petrovich', '2019-10-23 17:30:00', 'Svetlaya 12/5','+7-913-484-78-54');
