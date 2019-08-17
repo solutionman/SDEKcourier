@@ -20,6 +20,7 @@ public class CustomerMapper implements RowMapper<Customer> {
         customer.setPhone( rs.getString( "phone" ) );
         customer.setLateDelivery( rs.getString( "latedelivery" ) );
         customer.setDeliveryTime( rs.getString( "deliveryTime" ) );
+        customer.setLateTaskTime( rs.getString( "lateTaskTime" ) );
         return customer;
     }
 }

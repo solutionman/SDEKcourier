@@ -13,6 +13,7 @@ public class Customer{
     private String deliveryTime;
     private String address;
     private String phone;
+    private String lateTaskTime;
 
     public Customer(){
 
@@ -88,5 +89,13 @@ public class Customer{
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getLateTaskTime() {
+        return lateTaskTime;
+    }
+
+    public void setLateTaskTime(String lateTaskTime) {
+        this.lateTaskTime = lateTaskTime;
     }
 }
