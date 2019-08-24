@@ -7,7 +7,7 @@
 <body>
 <H1><a href="/courier-1"> World's Best Delivery for our Customers </a></H1>
 <H1>Delivery List</H1>
-<form name="customerByID" action="/courier-1/customerByOrderNo" method="post">
+<form name="customerByID" action="/courier-1/cantDeliverByOrderNo" method="post">
     <p>orderNo:
         <input title="orderNo" type="text" name="orderNo" required pattern="[0-9]{1,20}">
         <input title="Can't deliver in time" type="submit" value="Can't deliver in time">

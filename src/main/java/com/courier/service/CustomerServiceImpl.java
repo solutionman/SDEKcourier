@@ -48,6 +48,11 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     @Override
+    public void laterByOrderNo(int orderNo) {
+        customerDao.laterByOrderNo( orderNo );
+    }
+
+    @Override
     public void cancel(int id) {
         customerDao.cancel( id );
     }

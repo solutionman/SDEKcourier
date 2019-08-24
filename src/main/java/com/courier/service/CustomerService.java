@@ -19,5 +19,7 @@ public interface CustomerService {
 
     void later( int id );
 
+    void laterByOrderNo( int orderNo );
+
     void cancel( int id );
 }

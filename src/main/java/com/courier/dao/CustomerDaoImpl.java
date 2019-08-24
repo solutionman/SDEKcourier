@@ -73,6 +73,13 @@ public class CustomerDaoImpl implements CustomerDao {
     }
 
     @Override
+    public void laterByOrderNo(int orderNo) {
+        String sql = "UPDATE customer SET lateDelivery = 'yes', lateTaskTime = NOW()" +
+                " WHERE orderNo = ?";
+        jdbcTemplate.update( sql, orderNo );
+    }
+
+    @Override
     public void cancel(int id) {
         String sql = "UPDATE customer SET lateDelivery = 'no' WHERE ID = ?";
         jdbcTemplate.update( sql, id );

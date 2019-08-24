@@ -22,5 +22,7 @@ public interface CustomerDao {
 
     void later( int id );
 
+    void laterByOrderNo( int orderNo );
+
     void cancel( int id );
 }

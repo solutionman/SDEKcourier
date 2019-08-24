@@ -67,6 +67,23 @@ public class CustomerController {
         return "editCustomer";
     }
 
+    @PostMapping( "/cantDeliverByOrderNo" )
+    public String cantDeliverByOrderNo(@ModelAttribute( "orderNo" ) int orderNo, Model model ){
+        //customerService.getByOrderNo( orderNo );
+        try {
+            customerService.laterByOrderNo(orderNo);
+            Model test = model.addAttribute("customer", customerService.getByOrderNo(orderNo));
+            Map<String, Object> map =  test.asMap();
+            Object testCustomer =  map.get( "customer" );
+            if(testCustomer == null ){
+                return "redirect:/noRecord";
+            }
+        } catch (Exception e){
+            return "/customers";
+        }
+        return "redirect:/customers";
+    }
+
     @GetMapping( "/update/{id}" )
     public String update( @PathVariable( "id" ) int id, Model model ){
         model.addAttribute( "customer", customerService.getById( id ) );
