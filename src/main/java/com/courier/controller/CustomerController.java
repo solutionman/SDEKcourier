@@ -76,7 +76,7 @@ public class CustomerController {
             Map<String, Object> map =  test.asMap();
             Object testCustomer =  map.get( "customer" );
             if(testCustomer == null ){
-                return "redirect:/noRecord";
+                return "redirect:/noRecordDeliveryList";
             }
         } catch (Exception e){
             return "/customers";
@@ -107,4 +107,8 @@ public class CustomerController {
         return "noRecord";
     }
 
+    @GetMapping( "/noRecordDeliveryList" )
+    public String noRecordDeliveryPage(){
+        return "noRecordDeliveryList";
+    }
 }
