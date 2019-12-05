@@ -5,9 +5,9 @@
     <title>Set New Delivery Date</title>
 </head>
 <body>
-<H1><a href="/courier-1"> World's Best Delivery for our Customers </a></H1>
+<H1><a href="/courier"> World's Best Delivery for our Customers </a></H1>
 <H1>Set New Delivery Date</H1>
-<form name="customer" action="/courier-1/updateCustomer" method="post">
+<form name="customer" action="/courier/updateCustomer" method="post">
     <#--<p>ID: ${customer.id}</p>-->
     <input title="ID" type="hidden" name="id" value="${customer.id}" readonly>
     <p>orderNo: ${customer.orderNo}</p>

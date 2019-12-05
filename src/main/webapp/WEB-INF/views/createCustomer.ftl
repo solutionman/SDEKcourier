@@ -5,9 +5,9 @@
     <title>Set New Delivery Date</title>
 </head>
 <body>
-<H1><a href="/courier-1"> World's Best Delivery for our Customers </a></H1>
+<H1><a href="/courier"> World's Best Delivery for our Customers </a></H1>
 <H1>Create New Customer</H1>
-<form name="customer" action="/courier-1/addCustomer" method="post">
+<form name="customer" action="/courier/addCustomer" method="post">
     <p>orderNo</p>
     <input title="orderNo" type="text" name="orderNo">
     <p>lastName</p>

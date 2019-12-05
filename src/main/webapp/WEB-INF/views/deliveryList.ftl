@@ -5,9 +5,9 @@
     <title>Delivery List</title>
 </head>
 <body>
-<H1><a href="/courier-1"> World's Best Delivery for our Customers </a></H1>
+<H1><a href="/courier"> World's Best Delivery for our Customers </a></H1>
 <H1>Delivery List</H1>
-<form name="customerByID" action="/courier-1/cantDeliverByOrderNo" method="post">
+<form name="customerByID" action="/courier/cantDeliverByOrderNo" method="post">
     <p>orderNo:
         <input title="orderNo" type="text" name="orderNo" required pattern="[0-9]{1,20}">
         <input title="Can't deliver in time" type="submit" value="Can't deliver in time">
@@ -37,11 +37,11 @@
             <td>${customer.deliveryTime}</td>
             <td>${customer.phone}</td>
             <#--<td>${customer.lateDelivery}</td>-->
-            <td><a href="/courier-1/later/${customer.id}">Can't deliver in time</a></td>
+            <td><a href="/courier/later/${customer.id}">Can't deliver in time</a></td>
         </tr>
     </#list>
 </table>
-<a href="/courier-1/addCustomer/">New Customer</a>
+<a href="/courier/addCustomer/">New Customer</a>
 </body>
 </html>
 

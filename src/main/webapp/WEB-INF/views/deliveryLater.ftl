@@ -5,9 +5,9 @@
     <title>Later Delivery</title>
 </head>
 <body>
-<H1><a href="/courier-1"> World's Best Delivery for our Customers </a></H1>
+<H1><a href="/courier"> World's Best Delivery for our Customers </a></H1>
 <H1>Later Delivery</H1>
-<form name="customerByID" action="/courier-1/customerByOrderNo" method="post">
+<form name="customerByID" action="/courier/customerByOrderNo" method="post">
     <p>Search By orderNo:
         <input title="orderNo" type="text" name="orderNo" required pattern="[0-9]{1,20}">
         <input title="Search" type="submit" value="Search">
@@ -40,8 +40,8 @@
             <td>${customer.deliveryTime}</td>
             <td>${customer.phone}</td>
             <#--<td>${customer.lateDelivery}</td>-->
-            <td><a href="/courier-1/cancel/${customer.id}">Cancel</a></td>
-            <td><a href="/courier-1/update/${customer.id}">Set new time</a></td>
+            <td><a href="/courier/cancel/${customer.id}">Cancel</a></td>
+            <td><a href="/courier/update/${customer.id}">Set new time</a></td>
             <td>${customer.lateTaskTime}</td>
         </tr>
     </#list>

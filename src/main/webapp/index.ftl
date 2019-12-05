@@ -7,9 +7,9 @@
 <body>
 <H1>World's Best Delivery for our Customers </H1>
 <br/>
-<a href="/courier-1/customers"> Delivery List </a>
+<a href="/courier/customers"> Delivery List </a>
 <br>
 <br>
-<a href="/courier-1/customersLater"> Late Delivery </a>
+<a href="/courier/customersLater"> Late Delivery </a>
 </body>
 </html>
